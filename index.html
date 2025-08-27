@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Give Birthday</title>
+  <link rel="stylesheet" href="gaya.css">
+</head>
+<body>
+
+  <!-- Halaman 1 -->
+  <div class="page active" id="page1">
+    <h1>Happy Birthday Bro!🎉</h1>
+    <div class="img-box">
+      <img src="pipipupu.png".png" alt="cake" width="300">
+    </div>
+    <div class="buttons">
+      <button class="btn yes" onclick="goPage(2)">Yes</button>
+      <button class="btn no" onclick="noClick()">No</button>
+    </div>
+  </div>
+
+  <!-- Halaman 2 -->
+  <div class="page" id="page2">
+    <img src="emote.png" alt="cute" width="120">   
+    <h1 style="color:#1d3557;">Happy Birthday Brok!</h1>
+    <div class="message-box">
+      selamat HBD! 🎂<br><br>
+      HBD gii...congrats juga udah jadi mahasiswa nih, selamat ya brok🎉.<br><br>
+      Intinya semoga semua target, cita-cita, dan keinginan lu bisa tercapai.  
+      Jangan lupa tetap jadi diri yang punya prinsip, dan jangan terlalu over ke cewek ya bro wkwk. Ingat juga, masih ada keluarga yang harus di bahagiakan.
+      Thanks juga udah jadi kawan baik selama ini, partner ngobrol, ketawa bahkan curhat random, walaupun sekarang udah ga bareng lagi.
+      Semoga rejeki, kesehatan, dan kebahagiaan selalu nyertai lu, bro. <br><br>
+      We may not be together anymore, but our friendship never fades! 🤜🤛
+    </div>
+    <button class="btn return-btn" onclick="goPage(1)">Back</button>
+    
+    <!-- Kontrol musik -->
+    <div style="margin-top:20px;">
+      <button class="btn" onclick="toggleMusic()">🎵 Play / Pause Music</button>
+    </div>
+  </div>
+
+  
+
+  <!-- Audio -->
+  <audio id="bg-music" loop>
+    <source src="happy-birthday-368842.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Script -->
+  <script src="skrip.js"></script>
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</body>
+</html>
