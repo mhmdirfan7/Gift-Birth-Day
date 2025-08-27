@@ -1,11 +1,16 @@
 let music = document.getElementById("bg-music");
 
+// Panggil confetti otomatis saat halaman load
+window.onload = () => {
+  startConfetti();
+};
+
 function goPage(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page' + page).classList.add('active');
 
   if (page === 2) {
-    startConfetti();
+    startConfetti(); // tetap muncul juga di page2
     playMusic(); // mulai musik otomatis
   } else {
     pauseMusic(); // stop musik kalau balik ke halaman 1
@@ -27,7 +32,7 @@ function noClick() {
 
   modal.innerHTML = `
     <div style="background:white; padding:20px; border-radius:15px; text-align:center; max-width:300px;">
-      <h3 style="margin-bottom:10px;">Waduh kok pencet No sih bro? 😭</h3>
+      <h3 style="margin-bottom:10px;"> di bilang klik yes? 😭</h3>
       <img src="bro face.png" alt="bro face" style="width:200px; border-radius:10px; margin-bottom:10px;">
       <br>
       <button style="padding:8px 20px; border:none; border-radius:8px; background:#ff6b6b; color:white; cursor:pointer;">
@@ -45,7 +50,7 @@ function noClick() {
 
 // Confetti
 function startConfetti() {
-  let duration = 3 * 1000;
+  let duration = 3 * 1000; // 3 detik
   let end = Date.now() + duration;
 
   (function frame() {
