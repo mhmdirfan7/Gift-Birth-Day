@@ -32,7 +32,7 @@ function noClick() {
 
   modal.innerHTML = `
     <div style="background:white; padding:20px; border-radius:15px; text-align:center; max-width:300px;">
-      <h3 style="margin-bottom:10px;"> di bilang klik yes!😭</h3>
+      <h3 style="margin-bottom:10px;">di bilang klik yes!😭</h3>
       <img src="bro face.png" alt="bro face" style="width:200px; border-radius:10px; margin-bottom:10px;">
       <br>
       <button style="padding:8px 20px; border:none; border-radius:8px; background:#ff6b6b; color:white; cursor:pointer;">
