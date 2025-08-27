@@ -1,83 +1,84 @@
+/* General layout */
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #fce8ff;
+  padding: 0;
+  font-family: Arial, sans-serif;
   text-align: center;
+  background-color: #ffe6f0; /* warna lembut */
 }
 
+/* Halaman */
 .page {
   display: none;
   padding: 20px;
 }
-
-.active {
+.page.active {
   display: block;
 }
 
-h1 {
-  color: #c1121f;
-  margin-bottom: 20px;
+/* Gambar utama */
+.img-box img {
+  max-width: 90%;   /* biar menyesuaikan layar */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.img-box {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  display: inline-block;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
+/* Tombol */
 .buttons {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* biar di HP bisa turun ke bawah */
 }
 
 .btn {
-  padding: 12px 24px;
-  margin: 10px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
 }
-
-.yes {
-  background: #ff6b6b;
+.btn.yes {
+  background-color: #e63946;
   color: white;
 }
-.yes:hover { background: #ff3b3b; }
-
-.no {
-  background: white;
-  color: #ff6b6b;
-  border: 2px solid #ff6b6b;
+.btn.no {
+  background-color: white;
+  border: 2px solid #e63946;
+  color: #e63946;
 }
-.no:hover { background: #ffecec; }
-
-.img-bro {
-  background: white;
-  padding: 20px;
-  border-radius: 200px;
-  display: inline-block;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.btn.return-btn {
+  margin-top: 20px;
+  background-color: #457b9d;
+  color: white;
 }
 
+/* Pesan */
 .message-box {
   max-width: 600px;
-  margin: auto;
-  padding: 20px;
+  margin: 20px auto;
+  padding: 15px;
   background: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  line-height: 1.6;
-  text-align: justify;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  line-height: 1.5;
 }
 
-.return-btn {
-  margin-top: 20px;
-  background: #457b9d;
-  color: white;
-}
-.return-btn:hover {
-  background: #1d3557;
+/* Responsiveness */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  .message-box {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
